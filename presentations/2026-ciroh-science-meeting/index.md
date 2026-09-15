@@ -1,6 +1,7 @@
 ---
 marp: true
 theme: ames
+size: 16:9
 paginate: false
 title: "From Reach IDs to Reasoning Agents"
 description: "CIROH Science Meeting 2026 · Tuscaloosa, AL · September 15, 2026"

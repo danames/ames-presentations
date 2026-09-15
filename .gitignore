@@ -3,3 +3,4 @@ _site/
 .DS_Store
 presentations/*/index.html
 __pycache__/
+presentations/*/notes.source.json

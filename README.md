@@ -22,32 +22,17 @@ deployed to GitHub Pages by `.github/workflows/pages.yml` on every push to `main
 
 ## Adding a talk
 
-Conference decks are designed slide by slide in PowerPoint, so the converter renders each presented
-slide to an image rather than re-authoring it. Speaker notes become presenter notes, hidden slides
-are dropped, and click-build slides can be expanded into one web slide per click.
+Follow [`CLAUDE.md`](CLAUDE.md), the step-by-step procedure (it is also what an AI agent working in
+this repo reads first). In short: inspect the deck, convert it, write reviewed public speaker notes in
+`notes.json`, check the rendered slides, add a card to `index.html`, and push.
 
 ```bash
-pip install python-pptx pymupdf pillow lxml      # plus LibreOffice for rendering
+python3 tools/pptx_to_marp.py "path/to/Talk.pptx" --inspect
 python3 tools/pptx_to_marp.py "path/to/Talk.pptx" presentations/2027-some-meeting \
     --title "Talk title" --event "Meeting · City · Date" --builds 13
 ```
 
-`--builds` takes PowerPoint slide numbers whose click animations should become separate slides.
-
-**Speaker notes are public** (they are in the page source). PowerPoint notes often hold private
-presenter coaching, so write audience-safe notes in `presentations/<slug>/notes.json`, keyed by web
-slide number; the converter uses that file whenever it exists and refuses to build if a slide is missing.
-
-Then add a card for the talk to `index.html`, check it locally, and push:
-
-```bash
-marp --no-stdin --theme theme/ames.css --html --allow-local-files \
-    presentations/2027-some-meeting/index.md -o /tmp/check.html && open /tmp/check.html
-```
-
-Do not commit built `.html` decks or the source `.pptx`.
-
 ## Viewing
 
 Arrow keys or click to advance, **F** for full screen, **P** for presenter view with speaker notes.
-Speaker notes are embedded in the published page source, which is why each talk keeps a reviewed `notes.json`.
+Speaker notes are embedded in the published page source, so each talk publishes only its reviewed `notes.json`.

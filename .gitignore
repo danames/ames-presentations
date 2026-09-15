@@ -1,0 +1,5 @@
+_site/
+*.pptx
+.DS_Store
+presentations/*/index.html
+__pycache__/

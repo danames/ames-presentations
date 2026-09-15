@@ -1,0 +1,10 @@
+/* @theme ames */
+@import 'default';
+
+/* Slides are full-bleed renders of the original PowerPoint, so the theme stays out of the way. */
+section {
+  background: #ffffff;
+  padding: 0;
+  width: 1280px;
+  height: 720px;
+}

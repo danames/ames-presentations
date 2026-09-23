@@ -98,17 +98,18 @@ The visits covered both built defenses and approaches that use natural processes
 ---
 
 # Five student capstone reports
-<div style="display:grid;grid-template-columns:1.25fr 1fr;gap:34px;">
+<div class="split" style="grid-template-columns:0.95fr 1.15fr;gap:32px;"><div>
 <div class="report-list">
 <p><strong>1. Noordwaard</strong><br><span>Depoldering, flood storage, and damage estimates</span></p>
 <p><strong>2. Voorsterklei</strong><br><span>Dike relocation and floodplain expansion</span></p>
 <p><strong>3. Deventer</strong><br><span>Secondary channels and floodplain lowering</span></p>
 <p><strong>4. Overdiepse Polder</strong><br><span>Farm relocation onto raised mounds</span></p>
 <p><strong>5. Nijmegen / Waal</strong><br><span>Relief channel, flood exposure, and urban impacts</span></p>
-</div><div class="photos" style="grid-template-columns:1.2fr 1fr;gap:16px;"><figure><img src="images/noordwaard-tower.jpg" alt="Student group at Noordwaard observation tower" style="height: 345px; object-fit: cover;"><figcaption>Noordwaard</figcaption></figure><figure><img src="images/nijmegen-waal.jpg" alt="Student group at Nijmegen" style="height: 345px; object-fit: contain;"><figcaption>Nijmegen / Waal</figcaption></figure><p class="small" style="grid-column:1/-1;"><strong>Reports include:</strong> before/after GIS maps, flood scenarios, damage estimates, and community and environmental impacts.</p></div></div>
+<p class="small" style="border-bottom:none;padding-bottom:0;margin-top:14px;color:#213447;"><strong>Deliverables:</strong> before/after GIS terrain analysis, bathtub flood models, and community impact audits.</p>
+</div></div><div><figure><img src="images/room-for-river-map.png" alt="QGIS map of the five Room for the River project locations across the Netherlands" style="height:480px;width:100%;object-fit:contain;border:1px solid #c9d5df;border-radius:4px;"><figcaption style="font-size:16px;margin-top:6px;color:#526779;">QGIS map showing the 5 capstone project sites and Delft field hub</figcaption></figure></div></div>
 
 <!--
-The final reports cover Noordwaard, Voorsterklei, Deventer, Overdiepse Polder, and Nijmegen/Waal. Teams reconstructed conditions before and after construction using terrain and infrastructure data. Their deliverables include flood maps, area and volume comparisons, exposure or damage estimates, and assessments of economic, social, and environmental impacts. Noordwaard examines depoldering of a 4,450-hectare area. Deventer examines secondary channels and floodplain lowering. Overdiepse examines farms on raised mounds. Nijmegen examines a relief channel and dike relocation about 350 meters inland. Cortenoever was also included in the original field-visit account, but it is not the subject of Team 5's final report. Sources: 2026 final reports, Teams 1–5, especially their executive summaries, GIS analyses, and impact assessments. Photos: existing program deck image library.
+The final reports cover Noordwaard, Voorsterklei, Deventer, Overdiepse Polder, and Nijmegen/Waal. Teams reconstructed conditions before and after construction using terrain and infrastructure data. Their deliverables include flood maps, area and volume comparisons, exposure or damage estimates, and assessments of economic, social, and environmental impacts. The overview map built in QGIS shows the geographic distribution of all five project sites along the Waal, Bergsche Maas, and IJssel rivers, relative to our 14-night base in Delft. Sources: 2026 final reports, Teams 1–5, and student QGIS spatial models.
 -->
 
 ---

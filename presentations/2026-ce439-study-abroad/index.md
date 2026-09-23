@@ -106,7 +106,7 @@ The visits covered both built defenses and approaches that use natural processes
 <p><strong>4. Overdiepse Polder</strong><br><span>Farm relocation onto raised mounds</span></p>
 <p><strong>5. Nijmegen / Waal</strong><br><span>Relief channel, flood exposure, and urban impacts</span></p>
 <p class="small" style="border-bottom:none;padding-bottom:0;margin-top:14px;color:#213447;"><strong>Deliverables:</strong> before/after GIS terrain analysis, bathtub flood models, and community impact audits.</p>
-</div></div><div><figure><img src="images/room-for-the-river-map.png" alt="QGIS map of the five Room for the River project locations across the Netherlands" style="height:480px;width:100%;object-fit:contain;border:1px solid #c9d5df;border-radius:4px;"><figcaption style="font-size:16px;margin-top:6px;color:#526779;">QGIS map showing the 5 capstone project sites and Delft field hub</figcaption></figure></div></div>
+</div></div><div><figure><img src="images/room-for-the-river-map.png?v=2" alt="QGIS map of the five Room for the River project locations across the Netherlands" style="height:480px;width:100%;object-fit:contain;border:1px solid #c9d5df;border-radius:4px;"><figcaption style="font-size:16px;margin-top:6px;color:#526779;">QGIS map showing the 5 capstone project sites and Delft field hub</figcaption></figure></div></div>
 
 <!--
 The final reports cover Noordwaard, Voorsterklei, Deventer, Overdiepse Polder, and Nijmegen/Waal. Teams reconstructed conditions before and after construction using terrain and infrastructure data. Their deliverables include flood maps, area and volume comparisons, exposure or damage estimates, and assessments of economic, social, and environmental impacts. The overview map built in QGIS shows the geographic distribution of all five project sites along the Waal, Bergsche Maas, and IJssel rivers, relative to our 14-night base in Delft. Sources: 2026 final reports, Teams 1–5, and student QGIS spatial models.
@@ -116,7 +116,7 @@ The final reports cover Noordwaard, Voorsterklei, Deventer, Overdiepse Polder, a
 
 # Report example: Voorsterklei
 <div style="display:grid;grid-template-columns:1fr 1fr 0.98fr;gap:28px;align-items:start;">
-<figure><img src="images/voorsterklei-before.jpg" alt="Student GIS map before dike relocation, 3-meter flood scenario" style="height: 448px; object-fit: contain;"><figcaption>Before relocation: <strong>302 ha</strong></figcaption></figure><figure><img src="images/voorsterklei-after.jpg" alt="Student GIS map after dike relocation, 3-meter flood scenario" style="height: 448px; object-fit: contain;"><figcaption>After relocation: <strong>481 ha</strong></figcaption></figure><div>
+<figure><img src="images/voorsterklei-before.jpg?v=1" alt="Student GIS map before dike relocation, 3-meter flood scenario" style="height: 448px; object-fit: contain;"><figcaption>Before relocation: <strong>302 ha</strong></figcaption></figure><figure><img src="images/voorsterklei-after.jpg?v=1" alt="Student GIS map after dike relocation, 3-meter flood scenario" style="height: 448px; object-fit: contain;"><figcaption>After relocation: <strong>481 ha</strong></figcaption></figure><div>
 <h2>59% more area inundated in the managed floodplain</h2>
 <p class="small">Team 2's <strong>3 m scenario</strong> shows where water can spread after dike relocation.</p>
 <p class="small rule">More farmland accepts floodwater. The report also examines roads, building relocation, and farming impacts.</p>
@@ -131,7 +131,7 @@ Team 2 modeled flood scenarios using elevation data from before and after the Vo
 ---
 
 # Field observations and model limits
-<div class="photos three"><figure><img src="images/noordwaard-landscape.jpg" alt="Waterways, farmland, and access at Noordwaard" style="height: 292px; object-fit: cover;"><figcaption><strong>Noordwaard</strong><br>Flood storage alongside farms and access</figcaption></figure><figure><img src="images/overdiepse-team.jpg" alt="Team 4 at Overdiepse Polder" style="height: 292px; object-fit: cover;"><figcaption><strong>Overdiepse Polder</strong><br>Farm relocation and raised mounds</figcaption></figure><figure><img src="images/noordwaard-waterways.jpg" alt="Noordwaard waterways viewed from the observation tower" style="height: 292px; object-fit: cover;"><figcaption><strong>Noordwaard</strong><br>Habitat and recreation within the floodplain</figcaption></figure></div>
+<div class="photos three"><figure><img src="images/noordwaard-landscape.jpg?v=1" alt="Waterways, farmland, and access at Noordwaard" style="height: 292px; object-fit: cover;"><figcaption><strong>Noordwaard</strong><br>Flood storage alongside farms and access</figcaption></figure><figure><img src="images/overdiepse-team.jpg?v=1" alt="Team 4 at Overdiepse Polder" style="height: 292px; object-fit: cover;"><figcaption><strong>Overdiepse Polder</strong><br>Farm relocation and raised mounds</figcaption></figure><figure><img src="images/noordwaard-waterways.jpg?v=1" alt="Noordwaard waterways viewed from the observation tower" style="height: 292px; object-fit: cover;"><figcaption><strong>Noordwaard</strong><br>Habitat and recreation within the floodplain</figcaption></figure></div>
 <p class="rule"><strong>Site visits added context to the GIS work.</strong></p>
 <p class="small">Static flood maps describe terrain and water levels. Field visits show how people use the land and where model assumptions need scrutiny.</p>
 <p class="source">Photos: Team 1 report, p. 26, and Team 4 report, p. 22. Model limitations: Team 1, p. 20.</p>
@@ -183,7 +183,7 @@ Staying in Delft for 14 nights saved time and logistics over moving hotels every
 <p class="small">After a fender bender, both drivers completed and signed a form for the insurers and rental company.</p>
 <p class="small">No police attended our incident.</p>
 </div>
-<figure><img src="images/germany-ticket-photo.jpeg" alt="Photograph accompanying Dan Ames’s German speeding ticket" style="height:440px;object-fit:contain;"><figcaption style="font-size:23px;color:#002e5d;"><strong>One souvenir arrived by mail.</strong><br>The German speeding ticket</figcaption></figure>
+<figure><img src="images/germany-ticket-photo.jpeg?v=1" alt="Photograph accompanying Dan Ames’s German speeding ticket" style="height:440px;object-fit:contain;"><figcaption style="font-size:23px;color:#002e5d;"><strong>One souvenir arrived by mail.</strong><br>The German speeding ticket</figcaption></figure>
 </div>
 
 <!--

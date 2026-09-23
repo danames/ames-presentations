@@ -33,6 +33,9 @@ style: |
   section.lead p { color: #d7e5f0; }
   section.lead figcaption { color: #d7e5f0; }
   .eyebrow { font-size: 22px; color: #e2be71 !important; margin-bottom: 18px; }
+  .cohort-copy { font-size: 23px; line-height: 1.25; }
+  .cohort-copy p { margin-bottom: 14px; }
+  .cohort-copy .rule { margin-top: 14px; padding-top: 12px; }
   .report-list { font-size: 24px; }
   .report-list p { border-bottom: 1px solid #dbe2e8; padding-bottom: 12px; margin-bottom: 13px; }
   .report-list span { color: #607286; font-size: 21px; }
@@ -57,29 +60,30 @@ The 2026 program combined preparation at BYU with 18 days in the Netherlands and
 # Academic preparation and field study
 <div class="split"><div>
 <ul>
-<li><strong>Prerequisites:</strong> CE 414 GIS and CE 341 fluid mechanics</li>
+<li><strong>Prerequisites:</strong> CE 414 GIS and CE 331 - Hydrology</li>
 <li><strong>Winter, CE 471:</strong> GIS data and flood models for five study sites</li>
 <li><strong>CE 439 field study:</strong> 3 credits, 18 days of visits and technical briefings</li>
 <li><strong>CE 498R capstone:</strong> technical reports on completed river projects</li>
 </ul>
-</div><div><figure><img src="images/copenhagen.jpg" alt="Copenhagen waterfront" style="height: 340px; object-fit: cover;"><figcaption>Copenhagen: harbor water quality, recreation, and coastal protection</figcaption></figure><p class="small rule"><strong>2026 side trip:</strong> 3 nights in Denmark<br>A rotating destination for comparative study</p></div></div>
+</div><div><figure><img src="images/copenhagen.jpg" alt="Copenhagen waterfront" style="height: 340px; object-fit: cover;"><figcaption>Copenhagen: harbor water quality, recreation, and coastal protection</figcaption></figure><p class="small rule"><strong>2026 side trip:</strong> 3 nights in Denmark<br>A rotating destination to keep it fresh and interesting</p></div></div>
 
 <!--
-CE 414 and CE 341 provide GIS and fluid mechanics preparation. Winter work in CE 471 focused on GIS layers and static flood models. The original curriculum description lists the three-credit field course as CE 439 / CE 431, International Challenges in Water Resources, with reports contributing to senior capstone evaluation. The Netherlands provides examples of land reclamation, polders, and Building with Nature. The original program overview reports 26% of the country below sea level and over half vulnerable to flooding. The rotating three-night side trip has included Belgium, Germany, France, and Scotland. Denmark added study of coastal defenses and harbor recreation and helped identify future field sites. Photo and curriculum context: original program deck.
+CE 414 and CE 331 provide GIS and hydrology preparation. Winter work in CE 471 focused on GIS layers and static flood models. The original curriculum description lists the three-credit field course as CE 439 / CE 431, International Challenges in Water Resources, with reports contributing to senior capstone evaluation. The Netherlands provides examples of land reclamation, polders, and Building with Nature. The original program overview reports 26% of the country below sea level and over half vulnerable to flooding. The destination rotates to keep it fresh and interesting. The three-night side trip has included Belgium, Germany, France, and Scotland. Denmark added study of coastal defenses and harbor recreation and helped identify future field sites. Photo and curriculum context: original program deck.
 -->
 
 ---
 
 # Cohort, support, and logistics
-<div class="split"><div>
-<p><strong>19 students</strong><br>15 women (79%) and 4 men</p>
-<p class="small">Sophomores through seniors<br>Water resources, environmental, and structural interests</p>
-<p><strong>$1,400 per student</strong><br><span class="small">Weidman Center scholarships, plus department support</span></p>
+<div class="split" style="grid-template-columns:1.1fr 1fr;"><div class="cohort-copy">
+<p><strong>18 students</strong><br>14 women and 4 men</p>
+<p class="small">Sophomores through seniors<br>Water resources, environmental, and structural interests - all capstone eligible</p>
+<p><strong>Advertised cost: $4,900–$5,300</strong><br><strong>Final cost: $4,500 per student</strong><br>After department support of $750 each</p>
+<p>Other support: Weidman Center and Kennedy Center scholarships</p>
 <p class="small rule"><strong>One Delft hotel for 14 Dutch nights</strong><br>Day trips within 2.5 hours of the hotel<br>3 nights in Denmark</p>
 </div><div><figure><img src="images/delft-town.jpg" alt="Delft city center" style="height: 450px; object-fit: cover;"><figcaption>Delft served as the base for Dutch site visits</figcaption></figure></div></div>
 
 <!--
-The cohort included 19 students: 15 women and 4 men, spanning sophomore through senior standing and several engineering interests. The Department of Civil and Construction Engineering provided financial support, and the Weidman Center for Global Leadership awarded $1,400 scholarships per student. The group used one Delft hotel for all 14 Dutch nights, compared with six or seven hotels in prior programs. Daily drives were within 2.5 hours. The stable base reduced hotel changes and provided a place for study and devotionals. Demographics, support, logistics, and photo: original program deck.
+The cohort included 18 students: 14 women and 4 men, spanning sophomore through senior standing and several engineering interests. All were capstone eligible. The advertised cost was $4,900–$5,300. The final cost was $4,500 per student after department support of $750 each. Other support came from the Weidman Center and Kennedy Center scholarships. The group used one Delft hotel for all 14 Dutch nights, compared with six or seven hotels in prior programs. Daily drives were within 2.5 hours. The stable base reduced hotel changes and provided a place for study and devotionals. Demographics and costs: program director’s corrected account. Photo: original program deck.
 -->
 
 ---
@@ -155,7 +159,7 @@ The program included student-led devotionals at 9 p.m., proxy baptisms at The Ha
 # Lessons learned: planning and logistics
 <div style="display:grid;grid-template-columns:1.2fr 1fr;gap:36px;align-items:start;">
 <div class="small">
-<p><strong>Keep Delft as the 14-night base</strong><br>Better location than Royal Bridges.<br>Next time, include a group gathering room.</p>
+<p><strong>Keep Delft as the 14-night base</strong><br>Saves time and logistics over moving hotels every few days<br>Delft Best Western - better location than Royal Bridges<br>Next time, include a group gathering room.</p>
 <p><strong>Mix rental cars and public transportation</strong><br>We did not need cars every day.</p>
 <p><strong>Track the budget during the trip</strong><br>About $4,000 went unspent that could have supported student meals or other benefits.</p>
 <p><strong>Simplify parking documentation</strong><br>Ask the Kennedy Center to waive receipts for parking under $50: we scanned 6–12 daily.</p>
@@ -164,7 +168,7 @@ The program included student-led devotionals at 9 p.m., proxy baptisms at The Ha
 </div>
 
 <!--
-The Delft hotel worked well as a 14-night base, with day trips across the Netherlands. Its location was better than Royal Bridges, but it lacked a group gathering space. A future hotel should meet both needs. Cars were useful for some visits, but public transportation could have covered other days. Renting cars only for the days they were needed could reduce costs and parking administration. About $4,000 remained unspent in the program budget. Closer tracking during the trip could have allowed more meals or other benefits for students. Scanning six to twelve parking receipts each day created a substantial administrative task. A proposed follow-up with the Kennedy Center is to request simpler documentation for parking charges below $50. This is a proposed change, not an existing exception. The program rotation remains Northern Europe in even years and the Dominican Republic in odd years, with opportunities for faculty advising, co-teaching, and research connections. Source: program director's account. Photo: original program deck.
+Staying in Delft for 14 nights saved time and logistics over moving hotels every few days. Delft Best Western had a better location than Royal Bridges, but it lacked a group gathering space. A future hotel should meet both needs. Cars were useful for some visits, but public transportation could have covered other days. Renting cars only for the days they were needed could reduce costs and parking administration. About $4,000 remained unspent in the program budget. Closer tracking during the trip could have allowed more meals or other benefits for students. Scanning six to twelve parking receipts each day created a substantial administrative task. A proposed follow-up with the Kennedy Center is to request simpler documentation for parking charges below $50. This is a proposed change, not an existing exception. The program rotation remains Northern Europe in even years and the Dominican Republic in odd years, with opportunities for faculty advising, co-teaching, and research connections. Source: program director's account. Photo: original program deck.
 -->
 
 ---

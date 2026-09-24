@@ -65,7 +65,13 @@ The 2026 program combined preparation at BYU with 18 days in the Netherlands and
 <li><strong>CE 439 field study:</strong> 3 credits, 18 days of visits and technical briefings</li>
 <li><strong>CE 498R capstone:</strong> technical reports on completed river projects</li>
 </ul>
-</div><div><figure><img src="images/copenhagen.jpg" alt="Copenhagen waterfront" style="height: 340px; object-fit: cover;"><figcaption>Copenhagen: harbor water quality, recreation, and coastal protection</figcaption></figure><p class="small rule"><strong>2026 side trip:</strong> 3 nights in Denmark<br>A rotating destination to keep it fresh and interesting</p></div></div>
+</div><div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
+<figure><img src="images/copenhagen.jpg" alt="Copenhagen waterfront" style="height: 250px; object-fit: cover; border-radius: 4px;"><figcaption style="font-size:16px;">Nyhavn waterfront</figcaption></figure>
+<figure><img src="images/copenhagen-cohort.jpg" alt="Cohort in Copenhagen" style="height: 250px; object-fit: cover; border-radius: 4px;"><figcaption style="font-size:16px;">Cohort in Copenhagen</figcaption></figure>
+</div>
+<p class="small rule" style="margin-top:14px;padding-top:12px;"><strong>2026 side trip:</strong> 3 nights in Denmark<br>A rotating destination to keep it fresh and interesting</p>
+</div></div>
 
 <!--
 CE 414 and CE 331 provide GIS and hydrology preparation. Winter work in CE 471 focused on GIS layers and static flood models. The original curriculum description lists the three-credit field course as CE 439 / CE 431, International Challenges in Water Resources, with reports contributing to senior capstone evaluation. The Netherlands provides examples of land reclamation, polders, and Building with Nature. The original program overview reports 26% of the country below sea level and over half vulnerable to flooding. The destination rotates to keep it fresh and interesting. The three-night side trip has included Belgium, Germany, France, and Scotland. Denmark added study of coastal defenses and harbor recreation and helped identify future field sites. Photo and curriculum context: original program deck.
@@ -80,7 +86,10 @@ CE 414 and CE 331 provide GIS and hydrology preparation. Winter work in CE 471 f
 <p><strong>Advertised cost: $4,900–$5,300</strong><br><strong>Final cost: $4,500 per student</strong><br>After department support of $750 each</p>
 <p>Other support: Weidman Center and Kennedy Center scholarships</p>
 <p class="small rule"><strong>One Delft hotel for 14 Dutch nights</strong><br>Day trips within 2.5 hours of the hotel<br>3 nights in Denmark</p>
-</div><div><figure><img src="images/delft-town.jpg" alt="Delft city center" style="height: 450px; object-fit: cover;"><figcaption>Delft served as the base for Dutch site visits</figcaption></figure></div></div>
+</div><div style="display:flex;flex-direction:column;gap:12px;">
+<figure><img src="images/delft-town.jpg" alt="Delft city center" style="height: 200px; object-fit: cover; border-radius: 4px;"><figcaption style="font-size:16px;">Delft base for 14 Dutch nights</figcaption></figure>
+<figure><img src="images/delft-students.jpg" alt="Students along Delft canals" style="height: 200px; object-fit: cover; border-radius: 4px;"><figcaption style="font-size:16px;">Students along the Oude Delft canals</figcaption></figure>
+</div></div>
 
 <!--
 The cohort included 18 students: 14 women and 4 men, spanning sophomore through senior standing and several engineering interests. All were capstone eligible. The advertised cost was $4,900–$5,300. The final cost was $4,500 per student after department support of $750 each. Other support came from the Weidman Center and Kennedy Center scholarships. The group used one Delft hotel for all 14 Dutch nights, compared with six or seven hotels in prior programs. Daily drives were within 2.5 hours. The stable base reduced hotel changes and provided a place for study and devotionals. Demographics and costs: program director’s corrected account. Photo: original program deck.
@@ -131,7 +140,7 @@ Team 2 modeled flood scenarios using elevation data from before and after the Vo
 ---
 
 # Field observations and model limits
-<div class="photos three"><figure><img src="images/noordwaard-landscape.jpg?v=1" alt="Waterways, farmland, and access at Noordwaard" style="height: 292px; object-fit: cover;"><figcaption><strong>Noordwaard</strong><br>Flood storage alongside farms and access</figcaption></figure><figure><img src="images/overdiepse-team.jpg?v=1" alt="Team 4 at Overdiepse Polder" style="height: 292px; object-fit: cover;"><figcaption><strong>Overdiepse Polder</strong><br>Farm relocation and raised mounds</figcaption></figure><figure><img src="images/noordwaard-waterways.jpg?v=1" alt="Noordwaard waterways viewed from the observation tower" style="height: 292px; object-fit: cover;"><figcaption><strong>Noordwaard</strong><br>Habitat and recreation within the floodplain</figcaption></figure></div>
+<div class="photos three"><figure><img src="images/noordwaard-tower.jpg?v=1" alt="Team 1 on the Noordwaard observation tower" style="height: 292px; object-fit: cover;"><figcaption><strong>Noordwaard</strong><br>Team 1 at observation tower</figcaption></figure><figure><img src="images/overdiepse-team.jpg?v=1" alt="Team 4 at Overdiepse Polder" style="height: 292px; object-fit: cover;"><figcaption><strong>Overdiepse Polder</strong><br>Farm relocation and raised mounds</figcaption></figure><figure><img src="images/noordwaard-waterways.jpg?v=1" alt="Noordwaard waterways viewed from the observation tower" style="height: 292px; object-fit: cover;"><figcaption><strong>Noordwaard</strong><br>Habitat and recreation within the floodplain</figcaption></figure></div>
 <p class="rule"><strong>Site visits added context to the GIS work.</strong></p>
 <p class="small">Static flood maps describe terrain and water levels. Field visits show how people use the land and where model assumptions need scrutiny.</p>
 <p class="source">Photos: Team 1 report, p. 26, and Team 4 report, p. 22. Model limitations: Team 1, p. 20.</p>
@@ -149,7 +158,10 @@ The reports document field visits as well as desktop analysis. Team 1 visited No
 <p><strong>Temple and Church history</strong><br><span class="small">The Hague Temple and Broeksterwoude baptism site</span></p>
 <p><strong>Museums and daily travel</strong><br><span class="small">Anne Frank House, Rijksmuseum, Van Gogh Museum, cycling, and urban rail</span></p>
 <p class="small rule">Activities supporting BYU's educational aims</p>
-</div><div class="photos" style="grid-template-columns:0.85fr 1.15fr;gap:18px;"><figure><img src="images/annefrank.jpg" alt="Anne Frank House sign" style="height: 410px; object-fit: contain;"><figcaption>Anne Frank House</figcaption></figure><figure><img src="images/hoge-veluwe-bikes.jpg" alt="Cycling through Hoge Veluwe National Park" style="height: 410px; object-fit: cover;"><figcaption>Hoge Veluwe National Park</figcaption></figure></div></div>
+</div><div style="display:flex;flex-direction:column;gap:12px;">
+<figure><img src="images/the-hague-temple.jpg" alt="Cohort at The Hague Netherlands Temple" style="height: 200px; object-fit: cover; border-radius: 4px;"><figcaption style="font-size:16px;">The Hague Netherlands Temple</figcaption></figure>
+<figure><img src="images/hoge-veluwe-bikes.jpg" alt="Cycling through Hoge Veluwe National Park" style="height: 200px; object-fit: cover; border-radius: 4px;"><figcaption style="font-size:16px;">Cycling across Hoge Veluwe National Park</figcaption></figure>
+</div></div>
 
 <!--
 The program included student-led devotionals at 9 p.m., proxy baptisms at The Hague Netherlands Temple in Zoetermeer, and a visit to Broeksterwoude, the site of the first Latter-day Saint baptisms in the Netherlands in 1861. Cultural activities included the Anne Frank House, Rijksmuseum, Van Gogh Museum, and cycling at Hoge Veluwe National Park. Students also used European rail and active transportation systems. These activities supported the spiritually strengthening, character-building, and intellectually enlarging aims of a BYU education. Activities and photos: original program deck.

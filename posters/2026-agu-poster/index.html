@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grounded GeoAI for Water · AGU26 poster · Dan Ames</title>
+<meta name="description" content="Online companion to AGU26 poster IN41E-2386: the HydroMap Data Watch Network and its grounded AI chat, with every section of the printed poster at full size plus the material that did not fit.">
+<meta property="og:title" content="Grounded GeoAI for Water (AGU26 IN41E-2386)">
+<meta property="og:description" content="Trustworthy, provenance-preserving conversational access to federated public hydrologic data. Dan Ames, BYU and HydroMap.">
+<meta property="og:image" content="https://danames.com/ames-presentations/posters/2026-agu-poster/img/card.jpg">
+<link rel="icon" href="https://danames.com/favicon.ico">
+<style>
+  :root { --ink:#0B2E3A; --teal:#0E7488; --teal-lt:#E6F1F3; --teal-mid:#B9DCE2; --sand:#D9631E; --sand-lt:#FBE9DE; --muted:#4A6470; --bg:#F7FAFB; --card:#fff; color-scheme: light; }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin:0; background:var(--bg); color:var(--ink); font: 17px/1.55 "Segoe UI", system-ui, -apple-system, Calibri, Arial, sans-serif; }
+  a { color: var(--teal); }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 16px; }
+  header.top { background: var(--ink); color:#fff; padding: 14px 0 26px; }
+  header.top .crumbs { font-size: .9em; opacity:.85; display:flex; gap:14px; flex-wrap:wrap; }
+  header.top .crumbs a { color:#fff; }
+  .meeting { margin: 18px 0 6px; color: #9fd3dc; font-weight: 600; letter-spacing: .02em; }
+  h1 { font-size: clamp(1.6em, 4vw, 2.5em); line-height: 1.15; margin: 4px 0 10px; }
+  .by { margin: 0 0 16px; color: #d6e6ea; }
+  .btns { display:flex; gap:10px; flex-wrap:wrap; }
+  .btn { display:inline-block; padding: 9px 16px; border-radius: 999px; background: var(--sand); color:#fff; text-decoration:none; font-weight:600; }
+  .btn.alt { background: transparent; border: 2px solid #9fd3dc; color:#fff; }
+  nav.toc { position: sticky; top:0; z-index: 5; background: #fff; border-bottom: 1px solid var(--teal-mid); }
+  nav.toc ol { list-style:none; margin:0 auto; padding: 8px 16px; max-width:1120px; display:flex; gap: 4px 16px; flex-wrap: wrap; font-size:.92em; }
+  nav.toc a { text-decoration:none; color: var(--muted); }
+  nav.toc a:hover { color: var(--teal); }
+  figure { margin: 0; }
+  .hero { position: relative; margin: 26px 0 0; border-radius: 14px; overflow: hidden; }
+  .hero img { display:block; width:100%; height:auto; aspect-ratio: 2.3; object-fit: cover; object-position: center 80%; }
+  .hero figcaption { position:absolute; left:0; right:0; bottom:0; background: rgba(11,46,58,.80); color:#fff; padding: 12px 18px; }
+  .hero .big { font-size: 1.25em; font-weight: 700; margin:0; }
+  .hero .big em { color: #F6B48A; font-style: normal; }
+  .hero .small { margin: 2px 0 0; font-size: .9em; opacity:.92; }
+  .credit { font-size:.8em; color: var(--muted); margin: 6px 2px 0; }
+  section { background: var(--card); border-radius: 14px; padding: 22px 24px; margin: 22px 0; box-shadow: 0 1px 3px rgba(11,46,58,.08); scroll-margin-top: 56px; }
+  h2 { display:flex; align-items:center; gap: 12px; font-size: 1.6em; margin: 0 0 12px; }
+  h2 .num { flex: 0 0 auto; width: 44px; height: 44px; border-radius: 50%; background: var(--teal); color:#fff; display:grid; place-items:center; font-size: .85em; }
+  h3 { font-size: 1.15em; margin: 22px 0 8px; }
+  .lede { font-size: 1.08em; }
+  .grid2 { display:grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 22px; align-items: start; }
+  .shot { border: 1px solid var(--teal-mid); border-radius: 8px; overflow: hidden; background:#fff; }
+  .shot img { display:block; width:100%; height:auto; }
+  figcaption.cap { font-size: .88em; color: var(--muted); font-style: italic; margin-top: 6px; }
+  pre.code { background: var(--ink); color:#fff; padding: 12px 14px; border-radius: 10px; font-size: .85em; white-space: pre-wrap; overflow-wrap: anywhere; }
+  pre.code b { color: var(--teal-mid); }
+  .lakes { display:grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 14px; }
+  .lake { background: var(--teal-lt); border-radius: 10px; padding: 12px 14px; }
+  .lake p { margin: 0; }
+  .lake .who { color: var(--sand); font-weight: 700; text-transform: uppercase; letter-spacing: .05em; font-size: .82em; }
+  .lake .q { color: var(--teal); font-weight: 700; margin: 2px 0 6px; }
+  .lake blockquote { margin: 0 0 6px; }
+  .lake .src { color: var(--muted); font-style: italic; font-size: .88em; }
+  .flow { display:flex; flex-direction: column; align-items: stretch; gap: 0; }
+  .flow .arrow { text-align:center; color: var(--teal); font-size: 1.4em; line-height: 1.2; }
+  ul.chips { list-style:none; padding:0; margin: 0; display:flex; flex-wrap: wrap; gap: 8px; }
+  ul.chips li { overflow-wrap:anywhere; border: 2px solid var(--teal); color: var(--teal); border-radius: 999px; padding: 3px 12px; font-weight: 600; font-size: .9em; background:#fff; }
+  ul.chips.mono li { font-family: ui-monospace, Menlo, Consolas, monospace; font-weight: 500; font-size: .82em; border-width: 1.5px; }
+  .box { border-radius: 10px; padding: 10px 14px; background: #fff; border: 1.5px solid var(--teal-mid); text-align: center; }
+  .box b { display:block; }
+  .box span { color: var(--muted); font-size: .92em; }
+  .box.dark { background: var(--teal); color:#fff; border-color: var(--teal); }
+  .box.dark span { color: #e6f1f3; }
+  .box.warn { background: var(--sand); border-color: var(--sand); color: #fff; }
+  .box.warn span { color: #fff; }
+  .row3 { display:grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+  .row2 { display:grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .chain { display:flex; align-items:center; justify-content:center; gap: 6px; flex-wrap: wrap; margin-top: 8px; font-size: .9em; }
+  .chain span { border: 1.5px solid var(--teal); border-radius: 8px; padding: 2px 10px; }
+  .chain span:first-child { background: var(--teal); color:#fff; }
+  .pair { margin: 18px 0 0; }
+  .pq { background: var(--teal); color:#fff; border-radius: 10px; padding: 8px 14px; margin: 0 0 8px; font-weight: 700; }
+  .tag { display:inline-block; background:#fff; color: var(--teal); border-radius: 6px; padding: 0 8px; margin-right: 6px; font-size: .78em; text-transform: uppercase; letter-spacing: .04em; }
+  .tag.warn { color: var(--sand); }
+  .two { display:grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 10px; }
+  .ans { border-radius: 10px; padding: 10px 14px; border: 2.5px solid var(--teal); background:#fff; }
+  .ans.gen { border-color: var(--teal-mid); }
+  .ans p { margin: 0 0 6px; }
+  .ans .lbl { font-size: .78em; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; color: var(--teal); }
+  .ans.gen .lbl { color: var(--muted); }
+  .ans .note { font-style: italic; color: var(--teal); font-size: .92em; margin: 0; }
+  .ans.gen .note { color: var(--muted); }
+  .fwd { border: 2px solid var(--sand); border-radius: 12px; padding: 12px; text-align:center; margin-top: 12px; }
+  .fwd .n { font-size: 2.4em; font-weight: 800; color: var(--sand); margin:0; line-height: 1.1; }
+  .fwd p { margin: 0; color: var(--muted); }
+  .anat { display:grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 22px; align-items:start; }
+  .page { position: relative; border: 1px solid var(--ink); }
+  .page img { display:block; width:100%; height:auto; }
+  .hot { position:absolute; border: 2px solid #D62828; border-radius: 4px; }
+  .hot span { position:absolute; left: -11px; top: -11px; width: 24px; height: 24px; border-radius: 50%; background: #D62828; color:#fff; font-size: 13px; font-weight: 700; display:grid; place-items:center; border: 2px solid #fff; }
+  .hot:hover, .hot:focus { background: rgba(214,40,40,.08); }
+  ol.legend { position: sticky; top: 64px; margin: 0; padding-left: 1.6em; }
+  ol.legend li { margin: 0 0 8px; color: var(--muted); }
+  ol.legend li b { color: var(--ink); display:block; }
+  ol.legend li:target { background: var(--sand-lt); border-radius: 6px; }
+  .tiles { display:grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .tile { background: var(--teal-lt); border-radius: 12px; padding: 14px; text-align:center; }
+  .tile p { margin: 0; }
+  .tile .score { font-size: 2.6em; font-weight: 800; color: var(--teal); line-height: 1.1; }
+  .tile.hi .score { color: var(--sand); }
+  .tile .tl { font-weight: 700; }
+  .tile .td { color: var(--muted); font-size: .9em; margin-top: 4px; }
+  .learned { background: var(--sand-lt); border-radius: 12px; padding: 12px 16px; margin-top: 14px; }
+  ol.pat li { margin-bottom: 4px; }
+  .stats { display:grid; grid-template-columns: repeat(5, 1fr); gap: 10px; }
+  .stat { background: var(--teal-lt); border-radius: 12px; padding: 12px; text-align:center; }
+  .stat p { margin: 0; color: var(--muted); font-size: .9em; }
+  .stat .n { font-size: 1.9em; font-weight: 800; color: var(--teal); }
+  .bar { display:grid; grid-template-columns: 11em 1fr 3.5em; align-items:center; gap: 8px; margin: 3px 0; font-size: .92em; }
+  .bar.mono .bn { font-family: ui-monospace, Menlo, Consolas, monospace; font-size: .9em; }
+  .bn { text-align: right; }
+  .bt { background: var(--teal-lt); border-radius: 4px; height: 18px; }
+  .bt i { display:block; height: 100%; background: var(--teal); border-radius: 4px; }
+  .bar.mono .bt i { background: var(--sand); }
+  .bv { font-variant-numeric: tabular-nums; }
+  .note-s { color: var(--muted); font-size: .88em; font-style: italic; }
+  footer { background: var(--ink); color:#fff; padding: 26px 0 40px; margin-top: 30px; }
+  footer a { color: #9fd3dc; }
+  footer h2 { color:#fff; }
+  .cite { background: rgba(255,255,255,.08); border-radius: 10px; padding: 10px 14px; font-size: .92em; }
+  @media (max-width: 820px) {
+    .grid2, .anat, .two, .row2 { grid-template-columns: minmax(0,1fr); }
+    .row3, .tiles { grid-template-columns: minmax(0,1fr); }
+    .stats { grid-template-columns: 1fr 1fr; }
+    ol.legend { position: static; }
+    nav.toc ol { flex-wrap: nowrap; overflow-x: auto; white-space: nowrap; }
+    section { padding: 18px 16px; }
+    .hero img { aspect-ratio: 1.5; }
+    .hero figcaption { position: static; }
+    .bar { grid-template-columns: 8.5em 1fr 3em; }
+  }
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <div class="crumbs"><a href="https://danames.com">danames.com</a> <span>›</span> <a href="https://danames.com/ames-presentations/">Presentations</a></div>
+    <p class="meeting">AGU26 Annual Meeting · Poster IN41E-2386 · Thu 10 Dec 2026, 08:30–12:00 PST · Moscone Center, Halls ABC</p>
+    <h1>Grounded GeoAI for Water: Trustworthy, Provenance-Preserving Conversational Access to Federated Public Hydrologic Data</h1>
+    <p class="by"><b>Daniel P. Ames</b> · Civil &amp; Construction Engineering, Brigham Young University · HydroMap LLC · <a href="mailto:dan.ames@byu.edu" style="color:#9fd3dc">dan.ames@byu.edu</a></p>
+    <div class="btns">
+      <a class="btn" href="https://lakes.hydromap.com">Try a Data Watch: lakes.hydromap.com</a>
+      <a class="btn alt" href="poster.pdf">Printed poster (PDF)</a>
+    </div>
+  </div>
+</header>
+<nav class="toc" aria-label="Sections"><ol>
+  <li><a href="#abstract">Abstract</a></li><li><a href="#s1">1 One core</a></li><li><a href="#s2">2 Pipeline</a></li>
+  <li><a href="#s3">3 Chat in action</a></li><li><a href="#s4">4 Anatomy</a></li><li><a href="#s5">5 Summaries</a></li>
+  <li><a href="#s6">6 Grounded?</a></li><li><a href="#s7">7 Use so far</a></li><li><a href="#more">Try it · cite</a></li>
+</ol></nav>
+<main class="wrap">
+  <figure class="hero">
+    <img src="img/hero.jpg" width="2000" height="1331" alt="Reflection Canyon on Lake Powell: a houseboat on dark water between sandstone walls marked by a pale band where the water once stood">
+    <figcaption>
+      <p class="big">Lake Powell on Nov 18, 2026: 3,540.25 ft, <em>23.6 ft above its Sep 2026 record low</em></p>
+      <p class="small">The pale band on the canyon walls is where the water stood. Level from USBR at Glen Canyon Dam, as the Lake Powell Data Watch reports it.</p>
+    </figcaption>
+  </figure>
+  <p class="credit">Reflection Canyon, Glen Canyon National Recreation Area. NPS Photo / Gary Ladd, public domain.</p>
+
+  <section id="abstract">
+    <h2>Abstract</h2>
+    <p>Geospatial AI is changing how water data reaches the public, but its usefulness for real decisions depends on trust: a model that fabricates a reservoir elevation or streamflow is worse than no answer. We present the HydroMap Data Watch Network, pairing interoperable data federation with a grounded-by-design GeoAI interface. A framework-free core federates more than a dozen live public services (USGS, the Bureau of Reclamation, NRCS, NOAA&#x27;s National Water Model, GEOGLOWS, CUAHSI community data, and state agencies) through a single adapter, caching, and quality-control layer. It serializes exactly the numbers each dashboard displays into a single labeled snapshot. A conversational assistant answers only from that snapshot and a small set of registered data tools; it is instructed never to invent numbers, to say so plainly when the data cannot answer, and to return every figure with its public source. A config-as-data, multi-tenant design turns each localized dashboard into a configuration entry, so one core and a single low-cost deployment serve many waterbodies, and one improvement in grounding or provenance reaches all of them at once. Using Great Salt Lake and Lake Powell as case studies, we share transferable patterns for reproducible, transparent GeoAI: one source of truth for page and model, citation-as-code, and graceful degradation across unreliable upstreams. These broaden trustworthy access to water resources information.</p>
+  </section>
+
+  <section id="s1">
+    <h2><span class="num">1</span>One core, many lakes</h2>
+    <p class="lede">Each Data Watch is a JSON config, not a fork: branding, sources, chat persona and tools. One ~$6/mo server runs all 12, so a grounding fix reaches every lake at once.</p>
+    <div class="grid2">
+      <figure>
+        <div class="shot"><img src="img/hub.jpg" width="1280" height="2246" loading="lazy" alt="lakes.hydromap.com: the Data Watch Network page with a card for each of the 12 Watches, each showing a lake photo, the latest credited reading and a past-year sparkline"></div>
+        <figcaption class="cap">lakes.hydromap.com, the whole page: every Watch with its photo, credited reading and past-year sparkline (captured Nov 15, 2026).</figcaption>
+      </figure>
+      <div>
+        <h3 style="margin-top:0">A Watch is a config entry</h3>
+<pre class="code"><b>powell.json</b>
+"chat_persona": "boater-first … never soften safety facts",
+"level": {"source": "usbr-uc", "datum": "NGVD29"},
+"projections": "USBR 24-Month Study"</pre>
+        <p>The config names the lake’s data sources, its vertical datum, its projections, the tools its chat may call and the voice of its persona. Everything else (the adapters, the cache, the snapshot, the chat pipeline and the page itself) is shared code, so a fix to grounding or provenance ships to every lake in one deploy.</p>
+      </div>
+    </div>
+    <h3>Ask any lake</h3>
+    <p class="note-s">One live question to each of eight more Watches, Nov 14, 2026 (Lake Mead re-asked Nov 18). Replies are verbatim; “…” marks cuts.</p>
+    <div class="lakes">
+      <article class="lake">
+        <p class="who">Lake Mead</p>
+        <p class="q">How close is Lake Mead to its record low?</p>
+        <blockquote>Lake Mead is currently 4.07 feet above its all-time record low of 1,037.16 ft (set on October 22, 2026), standing at an elevation of 1,041.23 ft Power House Datum as of November 17, 2026.</blockquote>
+        <p class="src">Source cited: USBR gage at Hoover Dam · Nov 17</p>
+      </article>
+      <article class="lake">
+        <p class="who">Flaming Gorge</p>
+        <p class="q">Where is Flaming Gorge projected to be next spring?</p>
+        <blockquote>According to the Bureau of Reclamation’s 24-Month Study… March 2027: ~5,995.1 ft RPVD · April: ~5,994.2 ft · May: ~5,992.0 ft… Reaching ~5,992 ft in May would set a new historic low for the reservoir.</blockquote>
+        <p class="src">Source cited: USBR 24-Month Study</p>
+      </article>
+      <article class="lake">
+        <p class="who">Utah Lake</p>
+        <p class="q">Is it safe to swim at Utah Lake right now?</p>
+        <blockquote>According to the latest monitoring data from the Utah Department of Environmental Quality (DEQ) (sampled October 31, 2026), the official status across most monitored sites on Utah Lake is HAB HW (Harmful Algal Bloom Health Watch)… never drink or swallow lake water…</blockquote>
+        <p class="src">Source cited: Utah DEQ samples · Oct 31</p>
+      </article>
+      <article class="lake">
+        <p class="who">Sea of Galilee</p>
+        <p class="q">How far is the Kinneret below the upper red line?</p>
+        <blockquote>The upper red line is set at −208.80 m MSL… With the Sea of Galilee currently at −213.735 m MSL (as of November 12, 2026), the lake is 4.935 meters (approximately 4.94 m) below the upper red line.</blockquote>
+        <p class="src">Source cited: Israel Water Authority · Nov 12</p>
+      </article>
+      <article class="lake">
+        <p class="who">Dead Sea</p>
+        <p class="q">Have there been any earthquakes under the Dead Sea lately?</p>
+        <blockquote>Yes. According to the Geological Survey of Israel’s seismic network, there have been 87 earthquakes… over the past 365 days… Largest in the past year: Magnitude 3.9 on January 15, 2026.</blockquote>
+        <p class="src">Source cited: Geological Survey of Israel seismic network</p>
+      </article>
+      <article class="lake">
+        <p class="who">Sand Hollow</p>
+        <p class="q">How full is Sand Hollow Reservoir?</p>
+        <blockquote>As of the most recent monthly reading on October 31, 2026, Sand Hollow Reservoir held 36,467 acre-feet… (Storage data is reported as a monthly end-of-month figure by the NRCS… so this reflects the end of October rather than a live daily reading.) …71.0% full.</blockquote>
+        <p class="src">Source cited: NRCS month-end reading · Oct 31</p>
+      </article>
+      <article class="lake">
+        <p class="who">Bear Lake</p>
+        <p class="q">Is Bear Lake higher or lower than a year ago?</p>
+        <blockquote>Bear Lake is lower than it was a year ago. Today (November 13, 2026): 5,911.6 ft (UP&amp;L datum) at the Bear Lake at State Park Marina USGS gage. One year ago (November 13, 2025): 5,915.1 ft. …approximately 3.5 feet lower.</blockquote>
+        <p class="src">Source cited: USGS gage at State Park Marina</p>
+      </article>
+      <article class="lake">
+        <p class="who">Lake Havasu</p>
+        <p class="q">How warm is the water at Lake Havasu right now?</p>
+        <blockquote>The water temperature at Lake Havasu is 70.3°F (as of November 13, 2026). This reading comes from the Bureau of Reclamation’s sensor at Parker Dam.</blockquote>
+        <p class="src">Source cited: USBR sensor at Parker Dam · Nov 13</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="s2">
+    <h2><span class="num">2</span>From public data to a grounded answer</h2>
+    <div class="flow">
+      <ul class="chips"><li>USGS</li><li>USBR</li><li>NRCS SNOTEL</li><li>NOAA NWPS</li><li>NWS</li><li>GEOGLOWS</li><li>Open-Meteo</li><li>Utah DWRi</li><li>Utah DEQ</li><li>Israel Water Authority</li><li>Geological Survey of Israel</li><li>Landsat</li></ul>
+      <div class="arrow">▼</div>
+      <div class="box"><b>Adapter, cache and quality-control layer</b><span>retries · despikes stuck sensors · draws gaps as gaps</span>
+        <div class="chain"><span>Live API</span>→<span>Memory</span>→<span>Disk</span>→<span>Git</span></div>
+        <span>When an upstream fails, the page falls back step by step to cached copies. Stale values are flagged: they can’t set a record or open a ramp.</span></div>
+      <div class="arrow">▼</div>
+      <div class="row3">
+        <div class="box"><b>Persona</b><span>from the lake’s JSON config: voice, audience, what to stress</span></div>
+        <div class="box dark"><b>Dashboard snapshot</b><span>up to 16 labeled sections: value, unit, gage, agency, date</span></div>
+        <div class="box"><b>Rules</b><span>use only this data · never invent numbers · say so when it can’t answer</span></div>
+      </div>
+      <div class="arrow">▼</div>
+      <div class="box dark"><b>Gemini Flash ⇄ 12 data tools, up to 4 calls per question</b><span>temperature 0.2 · Flash-Lite fallback · 15 s / 50 s deadlines · circuit breaker</span>
+        <ul class="chips mono" style="justify-content:center;margin-top:8px"><li>lake_level_history</li><li>ramp_status</li><li>lake_projection</li><li>milestone_watch</li><li>cross_section_depth</li><li>estimate_surface_area</li><li>river_inflows</li><li>weather_forecast</li><li>submerged_hazards</li><li>swim_advisory</li><li>background_knowledge</li><li>submit_question_for_research</li></ul></div>
+      <div class="arrow">▼</div>
+      <div class="row2">
+        <div class="box"><b>Answer with its source</b><span>numbers come only from the snapshot or a tool result: value, gage, datum and date</span></div>
+        <div class="box warn"><b>No data? Say so</b><span>says plainly it can’t answer, offers to forward the question, and only on the reader’s yes screens it and files it for the team</span></div>
+      </div>
+    </div>
+    <h3>Two agencies under one slider: the depth explorer</h3>
+    <div class="grid2">
+      <figure><div class="shot"><img src="img/depth.jpg" width="1200" height="1295" loading="lazy" alt="Lake Powell depth explorer, Nov 15, 2026: a water-level slider at 3,540 ft drives both the shoreline on the map and the waterline on the Padre Bay cross-section"></div></figure>
+      <p>USGS bathymetry (the 1 m topobathymetric DEM of Lake Powell) under today’s USBR level. One slider moves the shoreline on the map and the waterline on the cross-section. The chat’s <code>cross_section_depth</code> tool reads the same survey, so the number in an answer matches the picture on the page (see the Padre Bay question in section 3).</p>
+    </div>
+  </section>
+
+  <section id="s3">
+    <h2><span class="num">3</span>The chat in action</h2>
+    <div class="grid2">
+      <figure>
+        <div class="shot" style="max-width:420px"><img src="img/chat.jpg" width="800" height="940" loading="lazy" alt="Live Lake Powell chat panel, Nov 18, 2026: asked how far the lake is above its record low, it answers 23.63 ft above the all-time record low of 3,516.62 ft set September 15, 2026, at a live level of 3,540.25 ft"></div>
+        <figcaption class="cap">The live panel says what it is: grounded AI, answers only from this page. Each answer carries the gage, the datum and the date.</figcaption>
+      </figure>
+      <div>
+        <p><b>Same question, two ways.</b> Each pair below asks the Lake Powell Data Watch and the same Gemini model (gemini-flash-latest, temperature 0.2) called directly, with no persona, no dashboard snapshot and no tools; its question names Lake Powell. Both asked Nov 14, 2026. Verbatim excerpts; “…” marks cuts.</p>
+        <div class="fwd"><p class="n">25</p><p>questions the data couldn’t answer, forwarded to the team on the reader’s yes (late July to Nov 18, 2026)</p></div>
+      </div>
+    </div>
+    
+      <div class="pair">
+        <p class="pq"><span class="tag">From the snapshot</span> Which launch ramps can I use right now?</p>
+        <div class="two">
+          <div class="ans good"><p class="lbl">Lake Powell Data Watch</p><p>Wahweap Stateline Auxiliary: OPEN (est.). The lake is 24.6 ft above its 3,515 ft cutoff… Bullfrog North: OPEN, launch at your own risk (NPS)… All other public ramps are below their usability thresholds… Always confirm ramp availability before your trip on the NPS Glen Canyon Changing Lake Levels page.</p><p class="note">↳ Today’s level (3,539.64 ft) against each ramp’s cutoff</p></div>
+          <div class="ans gen"><p class="lbl">Same Gemini model, no data or tools</p><p>Stateline Auxiliary Ramp: OPEN… Wahweap Main Ramp: OPEN / PARTIALLY OPEN (depending on motorized boat size)… Bullfrog Main Ramp: OPEN… Open to motorized vessels of all sizes. The ramp has been extended to handle lower lake elevations.</p><p class="note">↳ No level, no date. At today’s 3,539.64 ft, Wahweap Main (3,545 ft cutoff) and Bullfrog Main (3,578 ft) are out</p></div>
+        </div>
+      </div>
+      <div class="pair">
+        <p class="pq"><span class="tag">Calls a tool</span> How deep would the water be across Padre Bay at full pool?</p>
+        <div class="two">
+          <div class="ans good"><p class="lbl">Lake Powell Data Watch</p><p>At full pool (3,700 ft NGVD29), the maximum water depth across Padre Bay would reach 501.9 feet… About 7.3 miles of the transect would be under water, compared to roughly 3.6 miles today. (Source: USGS 1m Topobathymetric DEM of Lake Powell…)</p><p class="note">↳ cross_section_depth on the USGS bathymetry</p></div>
+          <div class="ans gen"><p class="lbl">Same Gemini model, no data or tools</p><p>In the Submerged River Channel (The Deepest Point)… Depth: 480 to 520+ feet (145 to 160 meters)… Across the Open Bay… Depth: 150 to 350 feet… subtract roughly 120 to 170 feet from the numbers above to reflect current or recent typical conditions.</p><p class="note">↳ Right ballpark, but ranges with no source; the USGS survey gives 501.9 ft</p></div>
+        </div>
+      </div>
+      <div class="pair">
+        <p class="pq"><span class="tag warn">Can’t answer</span> What will the lake level be on July 4, 2030?</p>
+        <div class="two">
+          <div class="ans good"><p class="lbl">Lake Powell Data Watch</p><p>There is no official projection available for July 4, 2030. The Bureau of Reclamation only publishes operational forecasts up to 24 months out (the 24-Month Study, currently running through mid-2027)… Would you like to see the Bureau of Reclamation’s current projections through 2027 instead?</p><p class="note">↳ Says it can’t, and why; offers what it does have</p></div>
+          <div class="ans gen"><p class="lbl">Same Gemini model, no data or tools</p><p>It is impossible to know the exact water level of Lake Powell on July 4, 2030… Bureau of Reclamation Projections… Dry/Stress Scenarios: Hovering near or below the minimum power pool (3,470 to 3,500 feet)… Moderate/Current Policy Scenarios: … (3,520 to 3,580 feet)…</p><p class="note">↳ Unsourced ranges under Reclamation’s name; calls 2030 “six years out”</p></div>
+        </div>
+      </div>
+  </section>
+
+  <section id="s4">
+    <h2><span class="num">4</span>Anatomy of a Data Watch</h2>
+    <p class="lede">The whole Lake Powell page, top to bottom, live on Nov 18, 2026. Every box is a section a reader can use on its own; every number in it carries its agency and date.</p>
+    <div class="anat">
+      <div class="page"><img src="img/anatomy.jpg" width="1180" height="7633" loading="lazy" alt="The full Lake Powell Data Watch page, Nov 18, 2026, from the live level at the top to the citation line at the bottom"><a class="hot" href="#call-1" style="left:1.36%;top:0.84%;width:97.29%;height:7.01%" aria-label="1. Live level, with its source"><span>1</span></a><a class="hot" href="#call-2" style="left:1.36%;top:8.74%;width:63.98%;height:6.41%" aria-label="2. Postcard views"><span>2</span></a><a class="hot" href="#call-3" style="left:66.69%;top:8.74%;width:31.95%;height:6.30%" aria-label="3. This week, in plain language"><span>3</span></a><a class="hot" href="#call-4" style="left:1.36%;top:16.09%;width:63.98%;height:6.39%" aria-label="4. Basin map + depth explorer"><span>4</span></a><a class="hot" href="#call-5" style="left:66.69%;top:16.09%;width:31.95%;height:5.49%" aria-label="5. Weather on the water"><span>5</span></a><a class="hot" href="#call-6" style="left:1.36%;top:22.70%;width:63.98%;height:6.05%" aria-label="6. Level history"><span>6</span></a><a class="hot" href="#call-7" style="left:66.69%;top:22.70%;width:31.95%;height:5.76%" aria-label="7. By the numbers"><span>7</span></a><a class="hot" href="#call-8" style="left:1.36%;top:28.95%;width:97.29%;height:7.11%" aria-label="8. River inflows"><span>8</span></a><a class="hot" href="#call-9" style="left:1.36%;top:36.49%;width:47.97%;height:6.33%" aria-label="9. Where the lake is headed"><span>9</span></a><a class="hot" href="#call-10" style="left:50.68%;top:36.49%;width:47.97%;height:11.07%" aria-label="10. Ramps &amp; marinas"><span>10</span></a><a class="hot" href="#call-11" style="left:1.36%;top:47.78%;width:97.29%;height:5.46%" aria-label="11. Hazards &amp; passages"><span>11</span></a><a class="hot" href="#call-12" style="left:1.36%;top:53.44%;width:97.29%;height:10.21%" aria-label="12. How big is the lake?"><span>12</span></a><a class="hot" href="#call-13" style="left:1.36%;top:64.60%;width:47.97%;height:9.67%" aria-label="13. Know before you go"><span>13</span></a><a class="hot" href="#call-14" style="left:50.68%;top:64.60%;width:47.97%;height:9.20%" aria-label="14. Plan your trip"><span>14</span></a><a class="hot" href="#call-15" style="left:1.36%;top:74.47%;width:97.29%;height:6.84%" aria-label="15. The lake community"><span>15</span></a><a class="hot" href="#call-16" style="left:1.36%;top:81.51%;width:97.29%;height:5.58%" aria-label="16. Common questions"><span>16</span></a><a class="hot" href="#call-17" style="left:1.36%;top:87.31%;width:47.97%;height:7.77%" aria-label="17. Who watches the lake"><span>17</span></a><a class="hot" href="#call-18" style="left:50.68%;top:87.31%;width:47.97%;height:5.69%" aria-label="18. Data sources"><span>18</span></a><a class="hot" href="#call-19" style="left:1.36%;top:95.31%;width:97.29%;height:4.47%" aria-label="19. About &amp; how to cite"><span>19</span></a></div>
+      <ol class="legend"><li id="call-1"><b>Live level, with its source</b> agency, gage and date; 7- and 30-day change; email sign-up; “Ask” opens the grounded chat</li><li id="call-2"><b>Postcard views</b> every photo credited and licensed</li><li id="call-3"><b>This week, in plain language</b> AI summary of the page’s own numbers; news cited [n]</li><li id="call-4"><b>Basin map + depth explorer</b> live gages; drag the water level and the shoreline and cross-section move together</li><li id="call-5"><b>Weather on the water</b> NWS forecasts at the marinas</li><li id="call-6"><b>Level history</b> full record with full pool, record low, power and dead pool</li><li id="call-7"><b>By the numbers</b> lake facts, each with a source</li><li id="call-8"><b>River inflows</b> USGS observed + NWS forecast</li><li id="call-9"><b>Where the lake is headed</b> USBR 24-Month Study</li><li id="call-10"><b>Ramps &amp; marinas</b> status estimated from today’s level</li><li id="call-11"><b>Hazards &amp; passages</b> what today’s level means on the water</li><li id="call-12"><b>How big is the lake?</b> area, volume and depth; Landsat then and now</li><li id="call-13"><b>Know before you go</b> rules and advisories from the agencies</li><li id="call-14"><b>Plan your trip</b> rentals, fees, licenses, fishing</li><li id="call-15"><b>The lake community</b> who to follow for real-time news</li><li id="call-16"><b>Common questions</b> short answers from the same research that grounds the chat</li><li id="call-17"><b>Who watches the lake</b> the agencies that manage it</li><li id="call-18"><b>Data sources</b> every feed on the page, listed</li><li id="call-19"><b>About &amp; how to cite</b> a citation line generated by the page</li></ol>
+    </div>
+  </section>
+
+  <section id="s5">
+    <h2><span class="num">5</span>Summaries and email</h2>
+    <div class="grid2">
+      <div>
+        <p><b style="color:var(--teal)">Daily:</b> Gemini writes the page’s summary card from the same snapshot plus numbered headlines. A citation that matches no headline is dropped; water numbers never cite news.</p>
+        <p><b style="color:var(--sand)">Weekly email:</b> the same text, not a rewrite, with the agency reading and its date. Plus record and milestone alerts. No tracking pixels.</p>
+        <p class="note-s">Rendered from the app’s own email template with the Nov 18 Lake Powell summary (first 3 of 7 news items shown).</p>
+      </div>
+      <figure><div class="shot" style="max-width:460px"><img src="img/email.jpg" width="900" height="1298" loading="lazy" alt="The weekly Lake Powell email: the level 3,540.25 ft as of Nov 17 from USBR, the plain-language summary, and the first three of seven cited news items"></div></figure>
+    </div>
+  </section>
+
+  <section id="s6">
+    <h2><span class="num">6</span>Does it stay grounded?</h2>
+    <p>30 questions asked of the live chat on Nov 11, 2026 (Lake Powell and Great Salt Lake, each a fresh conversation), scored against the dashboard snapshot and the data tools’ own outputs.</p>
+    <div class="tiles"><div class="tile"><p class="score">17/20</p><p class="tl">answers right</p><p class="td">snapshot 8/10 · tools 9/10. Misses: a trend word, a rounded threshold, ‘tonight’ for ‘tomorrow’</p></div><div class="tile"><p class="score">12/20</p><p class="tl">named a source</p><p class="td">gage, agency or link in the reply itself; the rest leaned on the page</p></div><div class="tile hi"><p class="score">10/10</p><p class="tl">invented nothing</p><p class="td">on unanswerable questions; 6/10 also offered the hand-off, 3 drifted into general knowledge</p></div></div>
+    <p class="learned"><b style="color:var(--sand)">What we learned.</b> Grounding held: no invented figures, and the misses were wording, not made-up data. Attribution is the weak spot, so the next step is structured source links on every chat answer. Policy questions can pull the model into general knowledge.</p>
+    <h3>Patterns that transfer</h3>
+    <ol class="pat">
+      <li><b>One source of truth</b> for the page, the chat, the summary and the email.</li>
+      <li><b>Citation as code:</b> cite lines generated from one record; summary links checked.</li>
+      <li><b>Graceful degradation:</b> stale data flagged, not hidden, when upstreams fail.</li>
+      <li><b>Config as data:</b> one improvement ships to every lake.</li>
+    </ol>
+  </section>
+
+  <section id="s7">
+    <h2><span class="num">7</span>Use so far</h2>
+    <p class="note-s">Since tracking began (late July 2026), as of Nov 18, 2026: a snapshot, not a trend.</p>
+    <div class="stats"><div class="stat"><p class="n">12</p><p>Data Watches on one codebase</p></div><div class="stat"><p class="n">16,885</p><p>page visits, 9,317 of them in the last 30 days</p></div><div class="stat"><p class="n">113</p><p>chat questions, not counting our own test questions</p></div><div class="stat"><p class="n">51</p><p>confirmed email subscribers on 7 Watches</p></div><div class="stat"><p class="n">25</p><p>questions forwarded to the team</p></div></div>
+    <div class="grid2" style="margin-top:16px">
+      <div><h3>Page visits by Data Watch</h3><div class="bar "><span class="bn">Lake Mead</span><span class="bt"><i style="width:100.0%"></i></span><span class="bv">6,564</span></div><div class="bar "><span class="bn">Lake Powell</span><span class="bt"><i style="width:58.6%"></i></span><span class="bv">3,846</span></div><div class="bar "><span class="bn">Great Salt Lake</span><span class="bt"><i style="width:36.2%"></i></span><span class="bv">2,377</span></div><div class="bar "><span class="bn">Sea of Galilee</span><span class="bt"><i style="width:13.6%"></i></span><span class="bv">891</span></div><div class="bar "><span class="bn">Flaming Gorge</span><span class="bt"><i style="width:10.0%"></i></span><span class="bv">655</span></div><div class="bar "><span class="bn">Pineview</span><span class="bt"><i style="width:7.1%"></i></span><span class="bv">467</span></div><div class="bar "><span class="bn">Utah Lake</span><span class="bt"><i style="width:6.9%"></i></span><span class="bv">454</span></div><div class="bar "><span class="bn">Lake Havasu</span><span class="bt"><i style="width:5.7%"></i></span><span class="bv">374</span></div><div class="bar "><span class="bn">Dead Sea</span><span class="bt"><i style="width:5.3%"></i></span><span class="bv">351</span></div><div class="bar "><span class="bn">Sand Hollow</span><span class="bt"><i style="width:4.7%"></i></span><span class="bv">308</span></div><div class="bar "><span class="bn">Deer Creek</span><span class="bt"><i style="width:4.7%"></i></span><span class="bv">308</span></div><div class="bar "><span class="bn">Bear Lake</span><span class="bt"><i style="width:4.4%"></i></span><span class="bv">290</span></div></div>
+      <div><h3>Tools the chat called, last 30 days</h3><div class="bar mono"><span class="bn">background_knowledge</span><span class="bt"><i style="width:100.0%"></i></span><span class="bv">32</span></div><div class="bar mono"><span class="bn">lake_level_history</span><span class="bt"><i style="width:46.9%"></i></span><span class="bv">15</span></div><div class="bar mono"><span class="bn">estimate_surface_area</span><span class="bt"><i style="width:18.8%"></i></span><span class="bv">6</span></div><div class="bar mono"><span class="bn">lake_projection</span><span class="bt"><i style="width:9.4%"></i></span><span class="bv">3</span></div><div class="bar mono"><span class="bn">cross_section_depth</span><span class="bt"><i style="width:6.2%"></i></span><span class="bv">2</span></div><div class="bar mono"><span class="bn">ramp_status</span><span class="bt"><i style="width:6.2%"></i></span><span class="bv">2</span></div><div class="bar mono"><span class="bn">recent_earthquakes</span><span class="bt"><i style="width:3.1%"></i></span><span class="bv">1</span></div><div class="bar mono"><span class="bn">swim_advisory</span><span class="bt"><i style="width:3.1%"></i></span><span class="bv">1</span></div><div class="bar mono"><span class="bn">weather_forecast</span><span class="bt"><i style="width:3.1%"></i></span><span class="bv">1</span></div>
+        <p class="note-s">63 calls in all, including our own test questions.</p></div>
+    </div>
+  </section>
+</main>
+<footer id="more">
+  <div class="wrap">
+    <h2>Try it</h2>
+    <p>Ask a Data Watch anything. It answers from the live data on the page, or tells you it doesn’t know.
+      All Watches: <a href="https://lakes.hydromap.com">lakes.hydromap.com</a> ·
+      <a href="https://lakepowell.hydromap.com">Lake Powell</a> · <a href="https://greatsaltlake.hydromap.com">Great Salt Lake</a> ·
+      <a href="https://lakemead.hydromap.com">Lake Mead</a></p>
+    <h2>Cite this poster</h2>
+    <p class="cite">Ames, D. P. (2026). Grounded GeoAI for Water: Trustworthy, Provenance-Preserving Conversational Access to Federated Public Hydrologic Data. Poster IN41E-2386, AGU Annual Meeting 2026, San Francisco, CA, 7–11 December.</p>
+    <p>Questions or ideas: <a href="mailto:dan.ames@byu.edu">dan.ames@byu.edu</a> · <a href="https://danames.com/ames-presentations/">More presentations</a></p>
+  </div>
+</footer>
+</body>
+</html>

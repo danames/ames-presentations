@@ -8,6 +8,7 @@ deployed to GitHub Pages by `.github/workflows/pages.yml` on every push to `main
 
 | Talk | Live deck |
 | --- | --- |
+| Grounded GeoAI for Water (poster) · AGU Annual Meeting 2026 | [open](https://danames.com/ames-presentations/posters/2026-agu-poster/) |
 | From Reach IDs to Reasoning Agents · CIROH Science Meeting 2026 | [open](https://danames.com/ames-presentations/presentations/2026-ciroh-science-meeting/) |
 
 ## Layout
@@ -19,6 +20,7 @@ deployed to GitHub Pages by `.github/workflows/pages.yml` on every push to `main
 | `presentations/<yyyy-event>/images/` | That talk's slide images |
 | `theme/ames.css` | Deck theme (full-bleed, stays out of the way) |
 | `tools/pptx_to_marp.py` | PowerPoint → Marp converter |
+| `posters/<yyyy-event>/` | Hand-built online poster pages (static HTML, copied as-is by the workflow) |
 
 ## Adding a talk
 

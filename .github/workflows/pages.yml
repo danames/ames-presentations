@@ -34,6 +34,8 @@ jobs:
             marp --no-stdin --theme theme/ames.css --html "$md" -o "_site/$dir/index.html"
             [ -d "$dir/images" ] && cp -r "$dir/images" "_site/$dir/"
           done
+          # Online posters are hand-built static pages (no Marp): copy them as they are.
+          [ -d posters ] && cp -r posters _site/
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site

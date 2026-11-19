@@ -87,6 +87,8 @@
   .fwd { border: 2px solid var(--sand); border-radius: 12px; padding: 12px; text-align:center; margin-top: 12px; }
   .fwd .n { font-size: 2.4em; font-weight: 800; color: var(--sand); margin:0; line-height: 1.1; }
   .fwd p { margin: 0; color: var(--muted); }
+  .depth3 { display:grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 12px; }
+  .depth3 figcaption { font-size:.88em; color: var(--muted); margin-top: 6px; }
   .anat { display:grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 22px; align-items:start; }
   .page { position: relative; border: 1px solid var(--ink); }
   .page img { display:block; width:100%; height:auto; }
@@ -124,7 +126,7 @@
   .cite { background: rgba(255,255,255,.08); border-radius: 10px; padding: 10px 14px; font-size: .92em; }
   @media (max-width: 820px) {
     .grid2, .anat, .two, .row2 { grid-template-columns: minmax(0,1fr); }
-    .row3, .tiles { grid-template-columns: minmax(0,1fr); }
+    .row3, .tiles, .depth3 { grid-template-columns: minmax(0,1fr); }
     .stats { grid-template-columns: 1fr 1fr; }
     ol.legend { position: static; }
     nav.toc ol { flex-wrap: nowrap; overflow-x: auto; white-space: nowrap; }
@@ -150,8 +152,8 @@
 </header>
 <nav class="toc" aria-label="Sections"><ol>
   <li><a href="#abstract">Abstract</a></li><li><a href="#s1">1 One core</a></li><li><a href="#s2">2 Pipeline</a></li>
-  <li><a href="#s3">3 Chat in action</a></li><li><a href="#s4">4 Anatomy</a></li><li><a href="#s5">5 Summaries</a></li>
-  <li><a href="#s6">6 Grounded?</a></li><li><a href="#s7">7 Use so far</a></li><li><a href="#more">Try it · cite</a></li>
+  <li><a href="#s3">3 Chat in action</a></li><li><a href="#s4">4 Anatomy</a></li><li><a href="#s5">5 Depth explorer</a></li><li><a href="#s6">6 Summaries</a></li>
+  <li><a href="#s7">7 Grounded?</a></li><li><a href="#s8">8 Use so far</a></li><li><a href="#more">Try it · cite</a></li>
 </ol></nav>
 <main class="wrap">
   <figure class="hero">
@@ -262,11 +264,7 @@
         <div class="box warn"><b>No data? Say so</b><span>says plainly it can’t answer, offers to forward the question, and only on the reader’s yes screens it and files it for the team</span></div>
       </div>
     </div>
-    <h3>Two agencies under one slider: the depth explorer</h3>
-    <div class="grid2">
-      <figure><div class="shot"><img src="img/depth.jpg" width="1200" height="1295" loading="lazy" alt="Lake Powell depth explorer, Nov 15, 2026: a water-level slider at 3,540 ft drives both the shoreline on the map and the waterline on the Padre Bay cross-section"></div></figure>
-      <p>USGS bathymetry (the 1 m topobathymetric DEM of Lake Powell) under today’s USBR level. One slider moves the shoreline on the map and the waterline on the cross-section. The chat’s <code>cross_section_depth</code> tool reads the same survey, so the number in an answer matches the picture on the page (see the Padre Bay question in section 3).</p>
-    </div>
+    <p class="note-s">The same adapter layer feeds the depth explorer, where two agencies’ data meet under one slider (section 5).</p>
   </section>
 
   <section id="s3">
@@ -315,7 +313,30 @@
   </section>
 
   <section id="s5">
-    <h2><span class="num">5</span>Summaries and email</h2>
+    <h2><span class="num">5</span>The depth explorer: two agencies under one slider</h2>
+    <p class="lede">Drag the water level and the lake fills or drains: the shoreline on the map and the waterline on a cross-section move together. The map is the USGS 1 m topobathymetric survey of Lake Powell, with shorelines surveyed every 10 ft; the level is USBR’s reading at Glen Canyon Dam. Here is the Padre Bay line at three levels, captured live on Nov 19, 2026.</p>
+    <div class="depth3">
+      <figure><div class="shot"><img src="img/depth-3490.jpg" width="1000" height="1209" loading="lazy" alt="Depth explorer at 3,490 ft: 70.7 square miles of lake; on the Padre Bay line the deepest water is about 292 ft and 2.4 of the 7.5 miles are under water"></div>
+        <figcaption><b>3,490 ft</b>, near minimum power pool: 70.7 sq mi of lake; ≈292 ft deepest on the line; 2.4 of 7.5 mi under water</figcaption></figure>
+      <figure><div class="shot"><img src="img/depth-3540.jpg" width="1000" height="1209" loading="lazy" alt="Depth explorer at today's 3,540 ft: 97.7 square miles; on the Padre Bay line the deepest water is about 342 ft and 3.6 of the 7.5 miles are under water"></div>
+        <figcaption><b>3,540 ft</b>, today: 97.7 sq mi; ≈342 ft deepest; 3.6 mi under water</figcaption></figure>
+      <figure><div class="shot"><img src="img/depth-3700.jpg" width="1000" height="1209" loading="lazy" alt="Depth explorer at full pool, 3,700 ft: 247.6 square miles; on the Padre Bay line the deepest water is about 502 ft and 7.3 of the 7.5 miles are under water"></div>
+        <figcaption><b>3,700 ft</b>, full pool: 247.6 sq mi; ≈502 ft deepest; 7.3 mi under water</figcaption></figure>
+    </div>
+    <div class="grid2" style="margin-top:14px">
+      <div>
+        <h3 style="margin-top:0">Why it matters for grounding</h3>
+        <p>The chat’s <code>cross_section_depth</code> tool reads the same survey as the picture. Asked how deep Padre Bay would be at full pool, the Data Watch answers 501.9 ft and names the USGS survey; the same model with no tools gives a range of 480 to 520+ ft with no source (section 3).</p>
+      </div>
+      <div>
+        <h3 style="margin-top:0">Try it</h3>
+        <p>Open <a href="https://lakepowell.hydromap.com/?depth=3540">lakepowell.hydromap.com/?depth=3540</a>, switch the basin map to <b>Depth explorer</b>, and drag the slider. The Wahweap, Padre Bay and Bullfrog ferry lines each have a cross-section.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="s6">
+    <h2><span class="num">6</span>Summaries and email</h2>
     <div class="grid2">
       <div>
         <p><b style="color:var(--teal)">Daily:</b> Gemini writes the page’s summary card from the same snapshot plus numbered headlines. A citation that matches no headline is dropped; water numbers never cite news.</p>
@@ -326,8 +347,8 @@
     </div>
   </section>
 
-  <section id="s6">
-    <h2><span class="num">6</span>Does it stay grounded?</h2>
+  <section id="s7">
+    <h2><span class="num">7</span>Does it stay grounded?</h2>
     <p>30 questions asked of the live chat on Nov 11, 2026 (Lake Powell and Great Salt Lake, each a fresh conversation), scored against the dashboard snapshot and the data tools’ own outputs.</p>
     <div class="tiles"><div class="tile"><p class="score">17/20</p><p class="tl">answers right</p><p class="td">snapshot 8/10 · tools 9/10. Misses: a trend word, a rounded threshold, ‘tonight’ for ‘tomorrow’</p></div><div class="tile"><p class="score">12/20</p><p class="tl">named a source</p><p class="td">gage, agency or link in the reply itself; the rest leaned on the page</p></div><div class="tile hi"><p class="score">10/10</p><p class="tl">invented nothing</p><p class="td">on unanswerable questions; 6/10 also offered the hand-off, 3 drifted into general knowledge</p></div></div>
     <p class="learned"><b style="color:var(--sand)">What we learned.</b> Grounding held: no invented figures, and the misses were wording, not made-up data. Attribution is the weak spot, so the next step is structured source links on every chat answer. Policy questions can pull the model into general knowledge.</p>
@@ -340,8 +361,8 @@
     </ol>
   </section>
 
-  <section id="s7">
-    <h2><span class="num">7</span>Use so far</h2>
+  <section id="s8">
+    <h2><span class="num">8</span>Use so far</h2>
     <p class="note-s">Since tracking began (late July 2026), as of Nov 18, 2026: a snapshot, not a trend.</p>
     <div class="stats"><div class="stat"><p class="n">12</p><p>Data Watches on one codebase</p></div><div class="stat"><p class="n">16,885</p><p>page visits, 9,317 of them in the last 30 days</p></div><div class="stat"><p class="n">113</p><p>chat questions, not counting our own test questions</p></div><div class="stat"><p class="n">51</p><p>confirmed email subscribers on 7 Watches</p></div><div class="stat"><p class="n">25</p><p>questions forwarded to the team</p></div></div>
     <div class="grid2" style="margin-top:16px">
